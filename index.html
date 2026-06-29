@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>김이현 | AI 활용 업무 혁신형 CS 전문가</title>
+    <meta name="description" content="고객의 소리(VOC)에 경청하고, AI 자동화 도구로 CS 생산성을 혁신하는 김이현의 디지털 명함 및 이력서입니다.">
+    
+    <!-- Open Graph (OG) 태그 - 카카오톡, 페이스북 등에서 링크 공유 시 미리보기 -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="김이현 | AI 활용 업무 혁신형 CS 전문가">
+    <meta property="og:description" content="고객의 목소리(VOC)에서 답을 찾고, AI 자동화 도구로 팀의 반복 업무를 혁신합니다. 3D 인터랙티브 디지털 명함 & 이력서">
+    <meta property="og:image" content="og-image.png">
+    <meta property="og:url" content="">
+    <meta property="og:site_name" content="김이현 디지털 명함">
+    <meta property="og:locale" content="ko_KR">
+    
+    <!-- Twitter Card 태그 - 트위터(X) 공유 시 미리보기 -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="김이현 | AI 활용 업무 혁신형 CS 전문가">
+    <meta name="twitter:description" content="고객의 목소리(VOC)에서 답을 찾고, AI 자동화 도구로 팀의 반복 업무를 혁신합니다.">
+    <meta name="twitter:image" content="og-image.png">
+    
+    <!-- 기타 SEO 메타 태그 -->
+    <meta name="author" content="김이현">
+    <meta name="keywords" content="김이현, 디지털명함, 이력서, CS전문가, AI자동화, 포트폴리오">
+    <link rel="icon" type="image/png" href="profile.png">
+    
+    <!-- Google Fonts: Outfit (영문) & Noto Sans KR (국문) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    
+    <!-- CSS 연결 -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- 배경을 장식하는 움직이는 그라데이션 원형 요소들 -->
+    <div class="bg-blur bg-circle-1"></div>
+    <div class="bg-blur bg-circle-2"></div>
+    <div class="bg-blur bg-circle-3"></div>
+
+    <!-- 전체 화면 정렬용 컨테이너 -->
+    <main class="app-container">
+        <!-- 명함과 이력서를 감싸는 메인 카드 래퍼 -->
+        <div class="card-wrapper" id="cardWrapper">
+            
+            <!-- 화면 고정 전환 버튼 (명함과 이력서 우측 상단 동일한 위치) -->
+            <button class="toggle-btn" id="toggleBtn" aria-label="명함 및 이력서 전환">
+                <span class="btn-icon">
+                    <!-- 아이콘 (카드 모양과 이력서 모양이 클래스에 따라 변경됨) -->
+                    <svg class="icon-card" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="2" y="5" width="20" height="14" rx="2" ry="2"></rect>
+                        <line x1="2" y1="10" x2="22" y2="10"></line>
+                    </svg>
+                    <svg class="icon-resume" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                        <polyline points="14 2 14 8 20 8"></polyline>
+                        <line x1="16" y1="13" x2="8" y2="13"></line>
+                        <line x1="16" y1="17" x2="8" y2="17"></line>
+                        <polyline points="10 9 9 9 8 9"></polyline>
+                    </svg>
+                </span>
+                <span class="btn-text text-to-resume">이력서 보기</span>
+                <span class="btn-text text-to-card">명함 보기</span>
+            </button>
+
+            <!-- 3D 회전 효과가 들어갈 실제 카드 요소 -->
+            <div class="card-inner">
+                
+                <!-- 1. 명함 영역 (앞면) -->
+                <div class="card-face card-front">
+                    <!-- 유리 반사 하이라이트 효과 (마우스 무브 연동) -->
+                    <div class="card-shine" id="cardShine"></div>
+                    
+                    <div class="profile-section">
+                        <div class="avatar-wrapper">
+                            <img src="profile.png" alt="김이현 프로필 사진" class="profile-img">
+                        </div>
+                        <h1 class="name-title">김이현</h1>
+                        <p class="job-title">AI 활용 CS 혁신가 / Operation Specialist</p>
+                        <p class="tagline">"고객의 목소리(VOC)에서 답을 찾고, AI 자동화 도구로 팀의 반복 업무를 혁신합니다."</p>
+                    </div>
+                    
+                    <div class="divider"></div>
+                    
+                    <div class="contact-section">
+                        <div class="contact-item">
+                            <svg class="contact-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                <polyline points="22,6 12,13 2,6"></polyline>
+                            </svg>
+                            <span>yihyun.kim@example.com</span>
+                        </div>
+                        <div class="contact-item">
+                            <svg class="contact-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                            </svg>
+                            <span>010-1111-1111</span>
+                        </div>
+                    </div>
+                    
+                    <div class="social-links">
+                        <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="깃허브 바로가기">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                            </svg>
+                        </a>
+                        <a href="https://blog.example.com" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="블로그 바로가기">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                                <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- 2. 이력서 영역 (뒷면) -->
+                <div class="card-face card-back">
+                    <div class="resume-scroll-container">
+                        <!-- 이력서 헤더 -->
+                        <header class="resume-header">
+                            <div class="resume-avatar-wrapper">
+                                <img src="profile.png" alt="김이현 프로필 사진" class="profile-img">
+                            </div>
+                            <div class="resume-intro">
+                                <h2>김이현 <span class="resume-sub">Kim Yi Hyun</span></h2>
+                                <p class="resume-contact">📧 yihyun.kim@example.com | 📱 010-1111-1111</p>
+                            </div>
+                        </header>
+                        
+                        <!-- 벤토 그리드 레이아웃 적용된 이력서 영역 -->
+                        <div class="resume-grid">
+                            
+                            <!-- 왼쪽 컬럼 (프로필/인적정보/기술) -->
+                            <div class="resume-col-left">
+                                <section class="resume-section">
+                                    <h3 class="section-title">자기 소개</h3>
+                                    <p class="section-text">
+                                        CS(고객 서비스) 분야에서 다양한 고객 의견을 해결해 온 실무 경험이 있습니다. 최근 이전 직장 퇴사 후, 단순 반복 업무의 효율성을 비약적으로 높일 수 있는 **AI 에이전트 기반 사무 자동화 기술**을 집중적으로 습득하였습니다. 이전 직무에서 닦은 소통 역량에 스마트한 자동화 솔루션 기획 역량을 결합하여, 고객과 회사 모두의 효율성을 2배로 넓히는 똑똑한 CS 스페셜리스트로 성장하고자 합니다.
+                                    </p>
+                                </section>
+                                
+                                <section class="resume-section">
+                                    <h3 class="section-title">보유 기술</h3>
+                                    <div class="skills-container">
+                                        <span class="skill-badge">CS Operations</span>
+                                        <span class="skill-badge">VOC 분석 & 분류</span>
+                                        <span class="skill-badge">LLM 프롬프트 엔지니어링</span>
+                                        <span class="skill-badge">AI 에이전트 설계 (TOML)</span>
+                                        <span class="skill-badge">사무 자동화 기획</span>
+                                        <span class="skill-badge">HTML5 / CSS3</span>
+                                    </div>
+                                </section>
+
+                                <section class="resume-section">
+                                    <h3 class="section-title">교육 및 학력</h3>
+                                    <div class="education-item">
+                                        <div class="edu-header">
+                                            <h4>AI 사무 자동화 전문가 과정</h4>
+                                        </div>
+                                        <span class="edu-date">2026.03 ~ 2026.06</span>
+                                        <p class="edu-detail">AI 에이전트 설계 및 프롬프트 엔지니어링 교육 수료</p>
+                                    </div>
+                                    <div class="education-item">
+                                        <div class="edu-header">
+                                            <h4>이전 학력 사항</h4>
+                                        </div>
+                                        <span class="edu-date">2017.03 ~ 2023.02</span>
+                                        <p class="edu-detail">전공 및 대학 사항을 적어주세요.</p>
+                                    </div>
+                                </section>
+                            </div>
+                            
+                            <!-- 오른쪽 컬럼 (프로젝트/경력) -->
+                            <div class="resume-col-right">
+                                <section class="resume-section">
+                                    <h3 class="section-title">수행 프로젝트</h3>
+                                    
+                                    <div class="project-item">
+                                        <div class="project-header">
+                                            <h4>CS 보고서 & VOC 자동화 비서</h4>
+                                            <span class="project-date">2026.06</span>
+                                        </div>
+                                        <p class="project-desc">대량의 VOC와 상담 데이터를 분석해 트렌드를 파악하고 주간 보고서 요약본을 제작하는 AI 에이전트입니다.</p>
+                                        <ul class="project-details">
+                                            <li>TOML 설정을 통한 AI 에이전트 업무 파이프라인 자동 설계</li>
+                                            <li>비정형 상담 로그의 분류 및 요약 기능 최적화</li>
+                                            <li>**성과**: 보고 작업 소요 시간을 90% 이상 단축</li>
+                                        </ul>
+                                    </div>
+                                    
+                                    <div class="project-item">
+                                        <div class="project-header">
+                                            <h4>가정통신문 일정 요약 에이전트</h4>
+                                            <span class="project-date">2026.05</span>
+                                        </div>
+                                        <p class="project-desc">장문의 공지문에서 일정 정보와 긴급 조치 사항을 분류해 추출해주는 에이전트입니다.</p>
+                                        <ul class="project-details">
+                                            <li>비구조적 가이드라인 텍스트 내 스케줄 데이터 파싱 정밀화</li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="project-item">
+                                        <div class="project-header">
+                                            <h4>최저가 실시간 모니터링 비서</h4>
+                                            <span class="project-date">2026.05</span>
+                                        </div>
+                                        <p class="project-desc">상품 최저 가격 변동 추이를 알아서 수집하고, 변동 발생 시 스마트 알림을 생성해 줍니다.</p>
+                                    </div>
+                                </section>
+
+                                <section class="resume-section">
+                                    <h3 class="section-title">경력 사항</h3>
+                                    <div class="education-item">
+                                        <div class="edu-header">
+                                            <h4>이전 직장 (CS 부서 담당자)</h4>
+                                            <span class="edu-date">2023.01 ~ 2025.10</span>
+                                        </div>
+                                        <p class="edu-detail">고객 문의 대처 및 불만 채널 운영 관리, 만족도지표 모니터링 전담</p>
+                                    </div>
+                                </section>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <!-- JavaScript 연결 -->
+    <script src="script.js"></script>
+</body>
+</html>

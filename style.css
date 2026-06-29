@@ -251,6 +251,17 @@ body {
     flex-direction: column;
     justify-content: space-between;
     padding: 40px;
+    
+    /* 3D 플립 시 backdrop-filter 관련 브라우저 버그 방지 */
+    opacity: 1;
+    visibility: visible;
+    transition: opacity var(--transition-speed) var(--transition-curve),
+                visibility var(--transition-speed) var(--transition-curve);
+}
+
+.card-wrapper.flipped .card-front {
+    opacity: 0;
+    visibility: hidden;
 }
 
 .profile-section {
@@ -371,6 +382,17 @@ body {
     transform: rotateY(180deg);
     display: flex;
     flex-direction: column;
+    
+    /* 3D 플립 시 backdrop-filter 관련 브라우저 버그 방지 */
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity var(--transition-speed) var(--transition-curve),
+                visibility var(--transition-speed) var(--transition-curve);
+}
+
+.card-wrapper.flipped .card-back {
+    opacity: 1;
+    visibility: visible;
 }
 
 .resume-scroll-container {

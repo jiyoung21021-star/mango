@@ -54,12 +54,8 @@ document.addEventListener('DOMContentLoaded', () => {
         // 복귀 시에는 부드러운 애니메이션이 적용되도록 transition 복구
         cardWrapper.style.transition = 'width 0.8s cubic-bezier(0.4, 0, 0.2, 1), height 0.8s cubic-bezier(0.4, 0, 0.2, 1), transform 0.6s cubic-bezier(0.4, 0, 0.2, 1)';
         
-        if (cardWrapper.classList.contains('flipped')) {
-            // 이력서 모드인 경우 기본 180도 뒤집어진 상태 유지
-            cardWrapper.style.transform = 'rotateY(180deg)';
-        } else {
-            // 명함 모드인 경우 0도 및 축소(1배) 복귀
-            cardWrapper.style.transform = 'rotateY(0deg) rotateX(0deg) scale3d(1, 1, 1)';
-        }
+        // 명함/이력서 모드 상관없이 틸트 효과를 초기화하여 wrapper 자체가 뒤집히지 않게 합니다.
+        // 실제 뒤집기(180도 회전)는 style.css의 .card-wrapper.flipped .card-inner 에서 처리됩니다.
+        cardWrapper.style.transform = 'rotateY(0deg) rotateX(0deg) scale3d(1, 1, 1)';
     }
 });
